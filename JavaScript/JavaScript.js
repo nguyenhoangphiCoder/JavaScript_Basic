@@ -119,3 +119,66 @@ while (i1 < arr3.length) {
   }
   i1++;
 }
+// function
+function Sum(a, b) {
+  // day la ham cu phap la function ten ham la sum truyen vao 2 tham so a va b
+  return a + b; // tra ve ket qua a+b
+}
+console.log("sum a+b = ", Sum(5, 5)); // in ra ket qua a+b khi ma gan gia tri 5 va 5 vao ham sum
+// phuong thuc return la dau hieu de ham nhan biet de tra ve kq
+// thoat ra 1 func thi dung keyword return
+//Arrow function
+let Sum1 = (a, b) => {
+  return a + b;
+};
+console.log("sum a+b = ", Sum1(5, 5));
+//arrow function cung nhu 1 function nhung cach viet khac nhau
+// khoi tao nhu 1 bien bth loai bor tu khoa function
+//them dau mui ten trc dau ngoac
+// ham filter
+let arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // cho 1 mang
+let filter = arr6.filter((item) => {
+  // tao 1 bien moi gan bien do bang mang . ham filter truyen vao filter 1 ham gan bang ite,
+  // tra ve ham do bang item va loc item do <=5
+  return item && item <= 5;
+});
+console.log(filter); // in ra 1 mang moi khi da loc
+
+// vd2
+let arr4 = [
+  { name: "abc", age: 20 },
+  { name: "cvb", age: 30 },
+  { name: "fdda", age: 20 },
+  { name: "ssd", age: 80 },
+  { name: "abss", age: 70 },
+  { name: "ssd", age: 30 },
+];
+let fil = arr4.filter((item) => {
+  return item && item.age === 30;
+});
+console.log(fil);
+
+// find
+let find = arr6.find((Element) => Element > 6);
+console.log(find);
+// filter khac find
+// filter loc ra het cac phan tu theo dieu kien
+//find chi loc 1 phan tu gan nhat theo dieu kien
+// map : ham nay dung de lap va tao ra 1 mang moi
+let map = arr6.map((item) => {
+  item = item * item;
+  return item;
+});
+console.log(map);
+// ss vong lap for va map
+// for se ko tao ra vong lap moi
+for (let i = 0; i < arr6.length; i++) {
+  arr6[i] = i * i;
+}
+console.log(arr6);
+// Reduce
+//sort
+arr6.sort();
+console.log(arr6); //sap xep tu thap den cao
+
+//lodash
